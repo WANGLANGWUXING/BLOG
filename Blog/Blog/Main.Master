@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="Style/Main.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,7 +15,71 @@
     <form id="form1" runat="server">
         <div>
             <div class="sidebar">
-                <div>
+                <header class="site-header">
+                    <div class="site-branding">
+                        <h1 class="site-title"><a href="Index.aspx" rel="name">无心的博客</a></h1>
+                        <p class="site-description">穷则独善其身，达则兼善天下。--《孟子》</p>
+                    </div>
+                </header>
+                <div class="secondary">
+                    <div class="widget-area">
+                        <aside class="widget widget_search">
+                            <asp:TextBox ID="txtSearch" runat="server" CssClass="search-field" placeholder="搜索……" TextMode="Search"></asp:TextBox>
+                        </aside>
+                        <aside class="widget widget_recent_entries">
+                            <h2 class="widget-title">近期文章
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="Index.aspx">测试1</a>
+                                </li>
+                                <li>
+                                    <a href="Index.aspx">测试2</a>
+                                </li>
+                                <li>
+                                    <a href="Index.aspx">测试3</a>
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside class="widget widget_recent_comments">
+                            <h2 class="widget-title">近期评论</h2>
+                            <ul class="recentcomments_ul">
+                                <li class="recentcomments">
+                                    <asp:Label ID="lblUserName" runat="server" Text="wuxin"></asp:Label>
+                                    发表在《<a href="Details.aspx">测试1</a>》
+                                </li>
+                                <li class="recentcomments">
+                                    <asp:Label ID="Label1" runat="server" Text="wuxin"></asp:Label>
+                                    发表在《<a href="Details.aspx">测试1</a>》
+                                </li>
+                                <li class="recentcomments">
+                                    <asp:Label ID="Label2" runat="server" Text="wuxin"></asp:Label>
+                                    发表在《<a href="Details.aspx">测试1</a>》</li>
+                                <li class="recentcomments">
+                                    <asp:Label ID="Label3" runat="server" Text="wuxin"></asp:Label>
+                                    发表在《<a href="Details.aspx">测试1</a>》</li>
+                                <li class="recentcomments">
+                                    <asp:Label ID="Label4" runat="server" Text="wuxin"></asp:Label>
+                                    发表在《<a href="Details.aspx">测试1</a>》</li>
+                            </ul>
+                        </aside>
+                        <aside class="widget widget_categories">
+                            <h2 class="widget-title">分类目录</h2>
+                            <ul>
+                                <li class="cat-item"><a href="#">学习</a></li>
+                                <li class="cat-item"><a href="#">心情</a></li>
+                                <li class="cat-item"><a href="#">未分类</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="widget widget_meta">
+                            <h2 class="widget-title">功能</h2>
+                            <ul>
+                                <li>
+                                    <a href="Login.aspx">登录</a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
                 </div>
             </div>
             <div class="content">
@@ -23,6 +88,11 @@
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-info">
+                    <span>无心的个人博客</span>
                 </div>
             </div>
         </div>

@@ -20,9 +20,9 @@ namespace Blog
         {
             if (AdminName.Text != "" && AdminPwd.Text != "")
             {
-                Admin_M admin=new Admin_M();
-                admin.Adminlogin=AdminName.Text;
-                admin.Adminpassword=AdminPwd.Text;
+                Admin_M admin = new Admin_M();
+                admin.Adminlogin = AdminName.Text;
+                admin.Adminpassword = AdminPwd.Text;
                 if (Admin_B.Login(admin))
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('登录成功！')</script>");
@@ -31,6 +31,10 @@ namespace Blog
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('登录失败！')</script>");
                 }
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('用户名或密码不能为空！')</script>");
             }
         }
     }

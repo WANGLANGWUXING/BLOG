@@ -7,3 +7,12 @@ F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogBLL\bin\Debug\Bl
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogBLL\obj\Debug\BlogBLL.csprojResolveAssemblyReference.cache
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogBLL\obj\Debug\BlogBLL.dll
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogBLL\obj\Debug\BlogBLL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\bin\Debug\BlogBLL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\bin\Debug\BlogBLL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\bin\Debug\BlogDAL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\bin\Debug\BlogModel.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\bin\Debug\BlogDAL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\bin\Debug\BlogModel.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\obj\Debug\BlogBLL.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\obj\Debug\BlogBLL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogBLL\obj\Debug\BlogBLL.pdb

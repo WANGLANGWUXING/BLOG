@@ -23,9 +23,9 @@ namespace BlogDAL
         /// <returns>返回读取器</returns>
         public static SqlDataReader ExecuteReader(string sql)
         {
-            SqlConnection conn=new SqlConnection(connStr);
+            SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
-            SqlCommand cmd=new SqlCommand(sql,conn);
+            SqlCommand cmd = new SqlCommand(sql, conn);
             return cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
         }
         /// <summary>
@@ -38,6 +38,50 @@ namespace BlogDAL
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
+            int result = cmd.ExecuteNonQuery();
+            conn.Close();
+            return result > 0;
+        }
+        /// <summary>
+        /// 调用存储过程进行查询  
+        /// </summary>
+        /// <param name="procName">存储过程名</param>
+        /// <param name="sqlParams">存储过程参数</param>
+        /// <returns>返回读取器</returns>
+        public static SqlDataReader ExecuteReader(string procName, params SqlParameter[] sqlParams)
+        {
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(procName, conn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            if (sqlParams != null)
+            {
+                foreach (SqlParameter item in sqlParams)
+                {
+                    cmd.Parameters.Add(item);
+                }
+            }
+            return cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+        }
+        /// <summary>
+        /// 调用存储过程进行增删改
+        /// </summary>
+        /// <param name="procName">存储过程名</param>
+        /// <param name="sqlParams">存储过程参数</param>
+        /// <returns>返回执行行数是否大于0</returns>
+        public static bool ExecuteNonQuery(string procName, params SqlParameter[] sqlParams)
+        {
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(procName, conn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            if (sqlParams != null)
+            {
+                foreach (SqlParameter item in sqlParams)
+                {
+                    cmd.Parameters.Add(item);
+                }
+            }
             int result = cmd.ExecuteNonQuery();
             conn.Close();
             return result > 0;

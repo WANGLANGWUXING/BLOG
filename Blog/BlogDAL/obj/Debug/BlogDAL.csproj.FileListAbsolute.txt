@@ -5,3 +5,10 @@ F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogDAL\bin\Debug\Bl
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogDAL\obj\Debug\BlogDAL.csprojResolveAssemblyReference.cache
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogDAL\obj\Debug\BlogDAL.dll
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogDAL\obj\Debug\BlogDAL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\bin\Debug\BlogDAL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\bin\Debug\BlogDAL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\bin\Debug\BlogModel.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\bin\Debug\BlogModel.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\obj\Debug\BlogDAL.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\obj\Debug\BlogDAL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogDAL\obj\Debug\BlogDAL.pdb

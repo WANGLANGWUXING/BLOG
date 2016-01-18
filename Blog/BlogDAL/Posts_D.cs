@@ -43,6 +43,11 @@ namespace BlogDAL
                     {
                         post.Post = Convert.ToString(dr["Post"]);
                     }
+                    if (dr["PublishTime"] != DBNull.Value)
+                    {
+                        post.PublishTime = Convert.ToDateTime(dr["PublishTime"]);
+                    }
+                    list.Add(post);
                 }
             }
             dr.Close();

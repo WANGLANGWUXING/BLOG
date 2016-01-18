@@ -3,3 +3,8 @@ F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogModel\bin\Debug\
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogModel\obj\Debug\BlogModel.csprojResolveAssemblyReference.cache
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogModel\obj\Debug\BlogModel.dll
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\BlogModel\obj\Debug\BlogModel.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogModel\bin\Debug\BlogModel.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogModel\bin\Debug\BlogModel.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogModel\obj\Debug\BlogModel.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogModel\obj\Debug\BlogModel.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\BlogModel\obj\Debug\BlogModel.pdb

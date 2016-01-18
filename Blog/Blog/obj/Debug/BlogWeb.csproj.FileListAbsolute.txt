@@ -9,3 +9,15 @@ F:\个人博客网站项目-软件\项目源码\VS2012\Blog\Blog\obj\Debug\Blog.
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\Blog\obj\Debug\Blog.pdb
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\Blog\bin\BlogDAL.dll
 F:\个人博客网站项目-软件\项目源码\VS2012\Blog\Blog\bin\BlogDAL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\Blog.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\Blog.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogBLL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogModel.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogDAL.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogBLL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogModel.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogDAL.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\BlogWeb.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\Blog.dll
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\Blog.pdb
+D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\Blog.dll.config
