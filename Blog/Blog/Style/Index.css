@@ -11,3 +11,21 @@
 .post-header {
     padding: 0 10%;
 }
+
+.post-content {
+    padding: 5% 10% 10%;
+}
+
+.post-footer {
+    padding: 5% 10%;
+    background-color: #f7f7f7;
+}
+
+
+.post-on, .cataegory-link, .comments-link {
+    margin-right: 1em;
+}
+
+   
+
+

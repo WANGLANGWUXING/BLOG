@@ -18,5 +18,16 @@ namespace Blog
             rptPostList.DataBind();
             //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('欢迎')</script>");
         }
+
+        protected void rptPostList_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            HiddenField categoryID = e.Item.FindControl("CategoryID") as HiddenField;
+            LinkButton CategoryName = e.Item.FindControl("CategoryName") as LinkButton;
+            if (!string.IsNullOrWhiteSpace(categoryID.Value))
+            {
+                Taxonomy_M tax = Taxonomy_B.getTaxonomyByID(categoryID.Value);
+                CategoryName.Text = tax.TaxonomyName;
+            }
+        }
     }
 }

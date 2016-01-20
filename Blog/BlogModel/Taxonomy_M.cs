@@ -21,7 +21,7 @@ namespace BlogModel
         /// <param name="taxonomyId">分类id</param>
         /// <param name="taxonomyName">分类名</param>
         /// <param name="taxonomydesc">分类描述</param>
-        public Taxonomy_M(int taxonomyId, int taxonomyName, int taxonomydesc)
+        public Taxonomy_M(int taxonomyId, string taxonomyName, string taxonomydesc)
         {
             this.TaxonomyId = taxonomyId;
             this.TaxonomyName = taxonomyName;
@@ -39,20 +39,20 @@ namespace BlogModel
             get { return taxonomyId; }
             set { taxonomyId = value; }
         }
-        private int taxonomyName;
+        private string taxonomyName;
         /// <summary>
         /// 分类名
         /// </summary>
-        public int TaxonomyName
+        public string TaxonomyName
         {
             get { return taxonomyName; }
             set { taxonomyName = value; }
         }
-        private int taxonomydesc;
+        private string taxonomydesc;
         /// <summary>
         /// 分类描述
         /// </summary>
-        public int Taxonomydesc
+        public string Taxonomydesc
         {
             get { return taxonomydesc; }
             set { taxonomydesc = value; }

@@ -43,6 +43,7 @@
     <Compile Include="SQLDBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Admin_D.cs" />
+    <Compile Include="Taxonomy_D.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlogModel\BlogModel.csproj">

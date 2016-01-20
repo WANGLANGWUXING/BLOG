@@ -71,6 +71,7 @@
     <Content Include="bin\BlogModel.pdb" />
     <Content Include="bin\RssToolkit.dll" />
     <Content Include="Details.aspx" />
+    <Content Include="images\favicon.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RSS.aspx" />
@@ -136,6 +137,7 @@
       <Name>BlogModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

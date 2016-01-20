@@ -20,4 +20,3 @@ D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogDAL.pdb
 D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\BlogWeb.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\Blog.dll
 D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\Blog.pdb
-D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\Blog.dll.config
