@@ -9,7 +9,7 @@
             <div class="post">
                 <header class="post-header">
                     <h2>
-                        <a href="Details.aspx"><%#Eval("Title") %></a>
+                        <a href="Details.aspx?PostId=<%#Eval("PostId") %>"><%#Eval("Title") %></a>
                     </h2>
                 </header>
                 <div class="post-content">
@@ -17,13 +17,13 @@
                 </div>
                 <footer class="post-footer">
                     <span class="post-on">
-                        <a href="#"><%#Eval("PublishTime") %></a>     </span>
+                        <a href="Details.aspx?PostId=<%#Eval("PostId") %>"><%#Eval("PublishTime") %></a>     </span>
                     <span class="cataegory-link">
                         <asp:HiddenField ID="CategoryID" runat="server" Value='<%#Eval("TaxonomyId") %>' />
                         <asp:LinkButton ID="CategoryName" runat="server"></asp:LinkButton>
                     </span>
                     <span class="comments-link">
-                        <a href="#">评论</a>
+                        <a href="Details.aspx?PostId=<%#Eval("PostId") %>">评论</a>
                     </span>
                 </footer>
             </div>

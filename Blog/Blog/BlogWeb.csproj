@@ -75,6 +75,7 @@
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RSS.aspx" />
+    <Content Include="Style\Details.css" />
     <Content Include="Style\Index.css" />
     <Content Include="Style\Login.css" />
     <Content Include="Style\Main.css" />

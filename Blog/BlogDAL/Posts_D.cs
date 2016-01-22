@@ -21,7 +21,7 @@ namespace BlogDAL
         {
             List<Posts_M> list = new List<Posts_M>();
             string sql = "select * from Posts";
-            SqlDataReader dr= SQLDBHelper.ExecuteReader(sql);
+            SqlDataReader dr = SQLDBHelper.ExecuteReader(sql);
             if (dr.HasRows)
             {
                 while (dr.Read())
@@ -53,6 +53,46 @@ namespace BlogDAL
             dr.Close();
             return list;
         }
+
+        /// <summary>
+        /// 根据ID查找帖子
+        /// </summary>
+        /// <param name="PostID">获取PostID</param>
+        /// <returns>返回一个对象</returns>
+        public static Posts_M PostByID(string PostID)
+        {
+            Posts_M Post = new Posts_M();
+            string sql = "select * from Posts where PostId=" + PostID;
+            SqlDataReader dr = SQLDBHelper.ExecuteReader(sql);
+            if (dr.HasRows)
+            {
+                dr.Read();
+                if (dr["PostId"] != DBNull.Value)
+                {
+                    Post.PostId = Convert.ToInt32(dr["PostId"]);
+                }
+                if (dr["TaxonomyId"] != DBNull.Value)
+                {
+                    Post.TaxonomyId = Convert.ToInt32(dr["TaxonomyId"]);
+                }
+                if (dr["Title"] != DBNull.Value)
+                {
+                    Post.Title = Convert.ToString(dr["Title"]);
+                }
+                if (dr["Post"] != DBNull.Value)
+                {
+                    Post.Post = Convert.ToString(dr["Post"]);
+                }
+                if (dr["PublishTime"] != DBNull.Value)
+                {
+                    Post.PublishTime = Convert.ToDateTime(dr["PublishTime"]);
+                }
+            }
+            dr.Close();
+            return Post;
+        }
+
+
 
 
     }

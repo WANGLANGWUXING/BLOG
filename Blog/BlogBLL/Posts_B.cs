@@ -8,11 +8,29 @@ using System.Threading.Tasks;
 
 namespace BlogBLL
 {
+    /// <summary>
+    ///业务逻辑类
+    /// </summary>
     public class Posts_B
     {
+        /// <summary>
+        /// 查出所有帖子集合
+        /// </summary>
+        /// <returns>返回集合</returns>
         public static List<Posts_M> PostList()
         {
             return Posts_D.PostList();
         }
+        /// <summary>
+        /// 根据ID查找帖子
+        /// </summary>
+        /// <param name="PostID">获取PostID</param>
+        /// <returns>返回一个对象</returns>
+        public static Posts_M PostByID(string PostID)
+        {
+            return Posts_D.PostByID(PostID);
+        }
+
+
     }
 }
