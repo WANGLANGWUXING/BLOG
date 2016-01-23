@@ -76,30 +76,36 @@ select * from Posts where PostId=2
 select * from Users
 select * from Users where UserId=2
 
+select * from Users
 select * from Comments
 select * from Comments where CommentId=2
 
 insert into Admin(Adminlogin,Adminpassword) select 'wuxin','123456'
 
 insert into Taxonomy(TaxonomyName,Taxonomydesc) select '心情','平时感悟及心情记录'
-
+insert into Taxonomy(TaxonomyName,Taxonomydesc) select '学习','学习经验'
 insert into Posts(TaxonomyId,Title,Post) select '1','xx','sadfasdfasdfasd'
-
+insert into Posts(TaxonomyId,Title,Post) select '1','萨芬','阿骨打'
+insert into Posts(TaxonomyId,Title,Post) select '2','aspnet','萨嘎哈尔'
+insert into Posts(TaxonomyId,Title,Post) select '2','php','sadf'
 insert into Users(Username,UserEmail,UserIP) select 'wuxin','1054356664@qq.com',''
 
 insert into Comments(PostId,UserId,Commentsmeta) select '1','1','GOOD'
 
-delete from Admin where AdminId=2
+--delete from Admin where AdminId=2
 
-delete from Taxonomy where TaxonomyId=2
+--delete from Taxonomy where TaxonomyId=2
 
-delete from Posts where PostId=2
+--delete from Posts where PostId=2
 
-delete from Users where UserId=2
+--delete from Users where UserId=2
 
-delete from Comments where CommentId=2
+--delete from Comments where CommentId=2
 
-Update Taxonomy set TaxonomyName='娱乐',Taxonomydesc='日常娱乐' where TaxonomyId=2
+Update Taxonomy set TaxonomyName='娱乐',Taxonomydesc='日常娱乐' where TaxonomyId=3
+
+Update Taxonomy set TaxonomyName='学习',Taxonomydesc='学习经验' where TaxonomyId=2
+
 
 Update Posts set TaxonomyId=1,Post='asdfrgfdhgfhfg' where PostId=2
 
@@ -113,3 +119,25 @@ begin
 	select *from Admin where Adminlogin=@AdminName and Adminpassword=@AdminPwd
 end
 go
+select * from Posts
+GO
+create proc proc_Insert_Comment
+	@PostId int,
+	@Username nvarchar(20),
+	@UserEmail nvarchar(100),
+	@Commentsmeta nvarchar(max),
+	@UserIP  nvarchar(20)  
+AS
+BEGIN
+	if exists()
+	insert into Users(Username,UserEmail,UserIP) select @Username,@UserEmail,@UserIP;
+	declare @UserId int;
+	select @UserId=@@IDENTITY
+	insert into Comments(PostId,UserId,Commentsmeta) select @PostId,@UserId,@Commentsmeta
+END
+
+exec proc_Insert_Comment 1,'xx','sdfs','sadfasdf',''
+
+select * from Users
+select * from Comments
+

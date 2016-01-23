@@ -37,7 +37,7 @@
                 </p>
                 <p class="comment-form-comment">
                     <label>评论</label>
-                    <textarea id="comment" name="comment" runat="server" cols="45" rows="8" required="required"></textarea>
+                    <asp:TextBox ID="txtComment" CssClass="textarea" runat="server" TextMode="MultiLine" Columns="45" Rows="8" required="required"></asp:TextBox>
                 </p>
                 <p class="comment-form-author">
                     <label>
