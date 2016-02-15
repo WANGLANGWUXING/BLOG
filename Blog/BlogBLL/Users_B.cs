@@ -1,4 +1,5 @@
 ﻿using BlogDAL;
+using BlogModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,15 @@ namespace BlogBLL
         public static bool AddComment(string PostId, string UserName, string UserEmail, string CommentMeta, string UserIP)
         {
             return Users_D.AddComment(PostId, UserName, UserEmail, CommentMeta, UserIP);
+        }
+        /// <summary>
+        /// 根据ID查访客
+        /// </summary>
+        /// <param name="id">访客ID</param>
+        /// <returns>返回类</returns>
+        public static Users_M UserByID(string id)
+        {
+            return Users_D.UserByID(id);
         }
     }
 }

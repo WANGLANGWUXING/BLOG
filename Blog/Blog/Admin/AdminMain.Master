@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.master.cs" Inherits="Blog.Admin.AdminMain" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Style/AdminMain.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrap">
+            <div class="adminMenu">
+                <div class="adminback"></div>
+                <div class="adminMenuwrap">
+                    <ul class="adminMenutip">
+                        <li class="menu">
+                            <a href="#">后台首页
+                            </a>
+                        </li>
+                        <li class="menu">
+                            <a href="#">帖子管理
+                            </a>
+                        </li>
+                        <li class="menu">
+                            <a href="#">分类管理
+                            </a>
+                        </li>
+                        <li class="menu">
+                            <a href="#">评论管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admincontent">
+                <div class="adminbar">
+                    <div class="quicklinks">
+                        <ul class="barleft">
+                            <li>
+                                <a href="../Index.aspx" class="linkIndex">无心的博客</a>
+                            </li>
+                        </ul>
+                        <ul class="barright">
+                            <li>
+                                <a class="">您好，<asp:Label ID="AdminName" runat="server"></asp:Label></a>
+
+                            </li>
+                            <li>
+                                <asp:Button ID="btnOut" runat="server" CssClass="btnlog" Text="登出" OnClick="btnOut_Click"/>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="body">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+
+
+        </div>
+    </form>
+</body>
+</html>

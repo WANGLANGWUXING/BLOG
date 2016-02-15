@@ -30,7 +30,19 @@ namespace BlogBLL
         {
             return Posts_D.PostByID(PostID);
         }
+        /// <summary>
+        /// 查出最新的三个帖子
+        /// </summary>
+        /// <returns>返回集合</returns>
+        public static List<Posts_M> PostListTop3()
+        {
+            return Posts_D.PostListTop3();
+        }
 
+        public static List<Posts_M> PostListByTaxID(string TaxID)
+        {
+            return Posts_D.PostListByTaxID(TaxID);
+        }
 
     }
 }

@@ -61,6 +61,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminIndex.aspx" />
+    <Content Include="Admin\Style\AdminMain.css" />
     <Content Include="bin\Blog.dll" />
     <Content Include="bin\Blog.pdb" />
     <Content Include="bin\BlogBLL.dll" />
@@ -74,14 +76,31 @@
     <Content Include="images\favicon.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="RSS.aspx" />
     <Content Include="Style\Details.css" />
     <Content Include="Style\Index.css" />
     <Content Include="Style\Login.css" />
     <Content Include="Style\Main.css" />
+    <Content Include="Style\Register.css" />
+    <Content Include="TaxPost.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminIndex.aspx.cs">
+      <DependentUpon>AdminIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminIndex.aspx.designer.cs">
+      <DependentUpon>AdminIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMain.Master.cs">
+      <DependentUpon>AdminMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMain.Master.designer.cs">
+      <DependentUpon>AdminMain.Master</DependentUpon>
+    </Compile>
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,6 +130,13 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RSS.aspx.cs">
       <DependentUpon>RSS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,9 +144,17 @@
     <Compile Include="RSS.aspx.designer.cs">
       <DependentUpon>RSS.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TaxPost.aspx.cs">
+      <DependentUpon>TaxPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaxPost.aspx.designer.cs">
+      <DependentUpon>TaxPost.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
+    <Content Include="Admin\AdminMain.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -138,7 +172,9 @@
       <Name>BlogModel</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Admin\images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

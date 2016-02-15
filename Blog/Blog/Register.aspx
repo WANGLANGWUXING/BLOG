@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Blog.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Blog.Register" %>
 
 <!DOCTYPE html>
 
@@ -6,12 +6,14 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>登录</title>
+    <link href="Style/Register.css" rel="stylesheet" />
     <link href="Style/Login.css" rel="stylesheet" />
+    <title>注册</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="login">
+        <div class="register login">
+            <p class="message">在这个站点注册</p>
             <div class="form">
                 <p>
                     <label>
@@ -21,22 +23,17 @@
                 </p>
                 <p>
                     <label>
-                        密码<br />
-                        <asp:TextBox ID="AdminPwd" runat="server" CssClass="input" TextMode="Password" Font-Size="20" MaxLength="20"></asp:TextBox>
+                        电子油箱<br />
+                        <asp:TextBox ID="AdminEmail" runat="server" CssClass="input" Font-Size="20" MaxLength="20"></asp:TextBox>
                     </label>
                 </p>
-                <p class="remember">
-                    <label>
-                        <asp:CheckBox ID="rememberCB" runat="server" CssClass="checkbox" />
-                        记住我的登录信息
-                    </label>
-                </p>
+                <p class="reg_passEmail">注册确认信将会被寄给您。</p>
                 <p>
-                    <asp:Button ID="btnLogin" runat="server" CssClass="btnlogin" Text="登录" OnClick="btnLogin_Click" />
+                    <asp:Button ID="btnReg" runat="server" CssClass="btnlogin" Text="注册" OnClick="btnReg_Click" />
                 </p>
             </div>
             <p class="nav">
-                <a href="Register.aspx">注册</a>|
+                <a href="Login.aspx">登录</a>|
                 <a href="#">找回密码</a>
             </p>
             <p class="backblog">

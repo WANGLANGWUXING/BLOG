@@ -25,7 +25,12 @@
 .post-on, .cataegory-link, .comments-link {
     margin-right: 1em;
 }
-
-   
-
-
+/*taxpost样式*/
+.page-header {
+    padding: 4.1666% 8.3333%;
+    margin: 0 8.3333%;
+    border-bottom: 0;
+    border-left: 7px solid #333;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin_B.cs" />
+    <Compile Include="Comments_B.cs" />
     <Compile Include="Posts_B.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Taxonomy_B.cs" />

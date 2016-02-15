@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comments_D.cs" />
     <Compile Include="Posts_D.cs" />
     <Compile Include="SQLDBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

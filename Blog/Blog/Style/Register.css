@@ -1,0 +1,22 @@
+﻿body {
+    color: #444;
+    font-family: "Open Sans",sans-serif;
+    font-size: 13px;
+    line-height: 1.4em;
+    height: 100%;
+    width: 100%;
+    background: #f1f1f1;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    border-left: 4px solid #00a0d2;
+    padding: 12px;
+    margin-left: 0;
+    background-color: #fff;
+}

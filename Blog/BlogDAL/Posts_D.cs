@@ -55,6 +55,46 @@ namespace BlogDAL
         }
 
         /// <summary>
+        /// 查出最新的三个帖子
+        /// </summary>
+        /// <returns>返回集合</returns>
+        public static List<Posts_M> PostListTop3()
+        {
+            List<Posts_M> list = new List<Posts_M>();
+            string sql = "select top 3 * from Posts order by PublishTime desc";
+            SqlDataReader dr = SQLDBHelper.ExecuteReader(sql);
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Posts_M post = new Posts_M();
+                    if (dr["PostId"] != DBNull.Value)
+                    {
+                        post.PostId = Convert.ToInt32(dr["PostId"]);
+                    }
+                    if (dr["TaxonomyId"] != DBNull.Value)
+                    {
+                        post.TaxonomyId = Convert.ToInt32(dr["TaxonomyId"]);
+                    }
+                    if (dr["Title"] != DBNull.Value)
+                    {
+                        post.Title = Convert.ToString(dr["Title"]);
+                    }
+                    if (dr["Post"] != DBNull.Value)
+                    {
+                        post.Post = Convert.ToString(dr["Post"]);
+                    }
+                    if (dr["PublishTime"] != DBNull.Value)
+                    {
+                        post.PublishTime = Convert.ToDateTime(dr["PublishTime"]);
+                    }
+                    list.Add(post);
+                }
+            }
+            dr.Close();
+            return list;
+        }
+        /// <summary>
         /// 根据ID查找帖子
         /// </summary>
         /// <param name="PostID">获取PostID</param>
@@ -92,8 +132,42 @@ namespace BlogDAL
             return Post;
         }
 
-
-
+        public static List<Posts_M> PostListByTaxID(string TaxID)
+        {
+            List<Posts_M> list = new List<Posts_M>();
+            string sql = "select * from Posts  where TaxonomyId =" + TaxID;
+            SqlDataReader dr = SQLDBHelper.ExecuteReader(sql);
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Posts_M post = new Posts_M();
+                    if (dr["PostId"] != DBNull.Value)
+                    {
+                        post.PostId = Convert.ToInt32(dr["PostId"]);
+                    }
+                    if (dr["TaxonomyId"] != DBNull.Value)
+                    {
+                        post.TaxonomyId = Convert.ToInt32(dr["TaxonomyId"]);
+                    }
+                    if (dr["Title"] != DBNull.Value)
+                    {
+                        post.Title = Convert.ToString(dr["Title"]);
+                    }
+                    if (dr["Post"] != DBNull.Value)
+                    {
+                        post.Post = Convert.ToString(dr["Post"]);
+                    }
+                    if (dr["PublishTime"] != DBNull.Value)
+                    {
+                        post.PublishTime = Convert.ToDateTime(dr["PublishTime"]);
+                    }
+                    list.Add(post);
+                }
+            }
+            dr.Close();
+            return list;
+        }
 
     }
 }

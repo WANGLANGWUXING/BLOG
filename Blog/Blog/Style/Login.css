@@ -100,3 +100,10 @@ a {
     text-decoration: none;
     color: #999;
 }
+
+.nav {
+    margin: 24px 0 0;
+    font-size: 13px;
+    padding: 0 24px;
+        color: #444;
+}

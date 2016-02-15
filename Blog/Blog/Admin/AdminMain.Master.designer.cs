@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Blog {
+namespace Blog.Admin {
     
     
-    public partial class Main {
+    public partial class AdminMain {
         
         /// <summary>
         /// head 控件。
@@ -31,31 +31,22 @@ namespace Blog {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// navPostRpt 控件。
+        /// AdminName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater navPostRpt;
+        protected global::System.Web.UI.WebControls.Label AdminName;
         
         /// <summary>
-        /// RptComments 控件。
+        /// btnOut 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RptComments;
-        
-        /// <summary>
-        /// navTaxRpt 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater navTaxRpt;
+        protected global::System.Web.UI.WebControls.Button btnOut;
         
         /// <summary>
         /// ContentPlaceHolder1 控件。

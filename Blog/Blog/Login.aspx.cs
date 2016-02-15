@@ -13,7 +13,15 @@ namespace Blog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                HttpCookie cookieUserName = Request.Cookies["UserName"];
+                if (cookieUserName != null)
+                {
+                    AdminName.Text = Server.UrlDecode(cookieUserName.Value);
+                    rememberCB.Checked = true;
+                }
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -25,7 +33,15 @@ namespace Blog
                 admin.Adminpassword = AdminPwd.Text;
                 if (Admin_B.Login(admin))
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('登录成功！')</script>");
+                    if (rememberCB.Checked)
+                    {
+                        HttpCookie cookieUserName = new HttpCookie("UserName");
+                        cookieUserName.Value = Server.UrlEncode(AdminName.Text);
+                        cookieUserName.Expires = DateTime.MaxValue;
+                        Response.Cookies.Add(cookieUserName);
+                    }
+                    Session["UserName"] = AdminName.Text;
+                    ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('登录成功！');location.href='Admin/AdminIndex.aspx'</script>");
                 }
                 else
                 {

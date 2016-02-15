@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href="Style/dashicons.css" rel="stylesheet" />
     <link href="Style/Main.css" rel="stylesheet" />
     <link href="images/favicon.jpg" type="image/x-icon" rel="shortcut icon" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -19,62 +19,56 @@
                 <header class="site-header">
                     <div class="site-branding">
                         <h1 class="site-title"><a href="Index.aspx" rel="name">无心的博客</a></h1>
-                        <p class="site-description">穷则独善其身，达则兼善天下。--《孟子》</p>
                     </div>
                 </header>
                 <div class="secondary">
                     <div class="widget-area">
-                        <aside class="widget widget_search">
-                            <asp:TextBox ID="txtSearch" runat="server" CssClass="search-field" placeholder="搜索……" TextMode="Search"></asp:TextBox>
-                        </aside>
                         <aside class="widget widget_recent_entries">
                             <h2 class="widget-title">近期文章
                             </h2>
                             <ul>
-                                <li>
-                                    <a href="Index.aspx">测试1</a>
-                                </li>
-                                <li>
-                                    <a href="Index.aspx">测试2</a>
-                                </li>
-                                <li>
-                                    <a href="Index.aspx">测试3</a>
-                                </li>
+                                <asp:Repeater ID="navPostRpt" runat="server">
+                                    <ItemTemplate>
+                                        <li>
+                                            <a href="Details.aspx?PostId=<%#Eval("PostId") %>">
+                                                <%#Eval("Title") %>
+                                            </a>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                             </ul>
                         </aside>
                         <aside class="widget widget_recent_comments">
                             <h2 class="widget-title">近期评论</h2>
                             <ul class="recentcomments_ul">
-                                <li class="recentcomments">
-                                    <asp:Label ID="lblUserName" runat="server" Text="wuxin"></asp:Label>
-                                    发表在《<a href="Details.aspx">测试1</a>》
-                                </li>
-                                <li class="recentcomments">
-                                    <asp:Label ID="Label1" runat="server" Text="wuxin"></asp:Label>
-                                    发表在《<a href="Details.aspx">测试1</a>》
-                                </li>
-                                <li class="recentcomments">
-                                    <asp:Label ID="Label2" runat="server" Text="wuxin"></asp:Label>
-                                    发表在《<a href="Details.aspx">测试1</a>》</li>
-                                <li class="recentcomments">
-                                    <asp:Label ID="Label3" runat="server" Text="wuxin"></asp:Label>
-                                    发表在《<a href="Details.aspx">测试1</a>》</li>
-                                <li class="recentcomments">
-                                    <asp:Label ID="Label4" runat="server" Text="wuxin"></asp:Label>
-                                    发表在《<a href="Details.aspx">测试1</a>》</li>
+                                <asp:Repeater ID="RptComments" runat="server" OnItemDataBound="RptComments_ItemDataBound">
+                                    <ItemTemplate>
+                                        <li class="recentcomments">
+                                            <asp:HiddenField ID="UserID" runat="server" Value='<%#Eval("UserId") %>' />
+                                            <asp:HiddenField ID="PostID" runat="server" Value='<%#Eval("PostId") %>' />
+                                            <asp:Label ID="UserName" runat="server" Text="未知"></asp:Label>
+                                            发表在《<a href="Details.aspx?PostId=<%#Eval("PostId") %>"><asp:Label ID="PostTitle" runat="server" Text="未知"></asp:Label></a>》</li>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                             </ul>
                         </aside>
                         <aside class="widget widget_categories">
                             <h2 class="widget-title">分类目录</h2>
                             <ul>
-                                <li class="cat-item"><a href="#">学习</a></li>
-                                <li class="cat-item"><a href="#">心情</a></li>
-                                <li class="cat-item"><a href="#">未分类</a></li>
+                                <asp:Repeater ID="navTaxRpt" runat="server">
+                                    <ItemTemplate>
+                                        <li class="cat-item"><a href="TaxPost.aspx?TaxID=<%#Eval("TaxonomyId") %>"><%#Eval("TaxonomyName") %></a></li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                             </ul>
                         </aside>
                         <aside class="widget widget_meta">
                             <h2 class="widget-title">功能</h2>
                             <ul>
+                                <li>
+                                    <a href="Register.aspx">注册</a>
+                                </li>
                                 <li>
                                     <a href="Login.aspx">登录</a>
                                 </li>

@@ -9,14 +9,18 @@ using System.Web.UI.WebControls;
 
 namespace Blog
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class TaxPost : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Posts_M> postlist = Posts_B.PostList();
-            rptPostList.DataSource = postlist;
-            rptPostList.DataBind();
-            //ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('欢迎')</script>");
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["TaxID"]))
+            {
+                string TaxID = Request.QueryString["TaxID"];
+                Taxonomy_M tax = Taxonomy_B.getTaxonomyByID(TaxID);
+                txtTax.Text = tax.TaxonomyName;
+                rptPostList.DataSource = Posts_B.PostListByTaxID(TaxID);
+                rptPostList.DataBind();
+            }
         }
 
         protected void rptPostList_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -27,7 +31,6 @@ namespace Blog
             {
                 Taxonomy_M tax = Taxonomy_B.getTaxonomyByID(categoryID.Value);
                 CategoryName.Text = tax.TaxonomyName;
-                CategoryName.PostBackUrl = "TaxPost.aspx?TaxID=" + tax.TaxonomyId;
             }
         }
     }

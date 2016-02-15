@@ -1,9 +1,17 @@
-﻿<%@ Page Title="无心的博客首页" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Blog.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="TaxPost.aspx.cs" Inherits="Blog.TaxPost" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Style/Index.css" rel="stylesheet" />
+    <style type="text/css">
+        .post {
+            margin-top: 8.3333%;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <header class="page-header">
+        <h1 class="page-title">分类：<asp:Label ID="txtTax" runat="server"></asp:Label></h1>
+    </header>
     <asp:Repeater ID="rptPostList" runat="server" OnItemDataBound="rptPostList_ItemDataBound">
         <ItemTemplate>
             <div class="post">
@@ -20,7 +28,7 @@
                         <a href="Details.aspx?PostId=<%#Eval("PostId") %>"><%#Eval("PublishTime") %></a>     </span>
                     <span class="cataegory-link">
                         <asp:HiddenField ID="CategoryID" runat="server" Value='<%#Eval("TaxonomyId") %>' />
-                        <asp:LinkButton ID="CategoryName" runat="server" ></asp:LinkButton>
+                        <asp:LinkButton ID="CategoryName" runat="server"></asp:LinkButton>
                     </span>
                     <span class="comments-link">
                         <a href="Details.aspx?PostId=<%#Eval("PostId") %>">评论</a>

@@ -1,0 +1,167 @@
+﻿body {
+    color: #444;
+    font-family: "Open Sans",sans-serif;
+    font-size: 13px;
+    line-height: 1.4em;
+    min-width: 600px;
+    overflow: hidden;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.adminMenuwrap {
+    position: relative;
+    float: left;
+    top: 32px;
+    z-index: 9990;
+    width: 160px;
+    height: 100%;
+    background-color: #23282d;
+}
+
+.adminback {
+    position: fixed;
+    top: 0;
+    bottom: -120px;
+    z-index: 1;
+    width: 165px;
+    background-color: #23282d;
+}
+
+
+.adminMenutip {
+    clear: left;
+    margin: 12px 0;
+    padding: 0;
+    list-style: none;
+    width: 160px;
+    background-color: #23282d;
+}
+
+.menu {
+    border: none;
+    line-height: 34px;
+    text-align: center;
+    height: 34px;
+    position: relative;
+    margin: 0px;
+    padding: 0;
+    cursor: pointer;
+}
+
+    .menu a {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+
+
+.admincontent {
+    margin-left: 160px;
+    height: 100%;
+    padding-left: 20px;
+    background: #f1f1f1;
+}
+
+.adminbar {
+    direction: ltr;
+    color: #ccc;
+    font: 400 13px/32px "Open Sans",sans-serif;
+    height: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 600px;
+    z-index: 99999;
+    background: #23282d;
+}
+
+    .adminbar * {
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        font: 400 13px/32px "Open Sans",sans-serif;
+        border-radius: 0;
+        box-sizing: content-box;
+    }
+
+    .adminbar ul {
+        text-align: left;
+        background: 0 0;
+        clear: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-indent: 0;
+        z-index: 99999;
+    }
+
+.barleft > li {
+    margin-right: 0;
+    float: left;
+}
+
+.linkIndex {
+    display: block;
+    margin-left: 20px;
+}
+
+.adminbar ul li {
+    background: 0 0;
+    clear: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-indent: 0;
+    z-index: 99999;
+}
+
+.adminbar li {
+}
+
+.barright > li {
+    float: right;
+}
+
+.linkIndex {
+    padding: 0 8px 0 7px;
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+.quicklinks a {
+    height: 32px;
+    display: block;
+    padding: 0 8px 0 7px;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #00b9eb;
+    }
+
+.btnlog {
+    cursor: pointer;
+}

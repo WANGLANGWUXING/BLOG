@@ -38,9 +38,19 @@ namespace BlogDAL
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
-            int result = cmd.ExecuteNonQuery();
-            conn.Close();
-            return result > 0;
+            try
+            {
+                int result = cmd.ExecuteNonQuery();
+                conn.Close();
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+                throw ex;
+            }
+
         }
         /// <summary>
         /// 调用存储过程进行查询  
@@ -82,9 +92,18 @@ namespace BlogDAL
                     cmd.Parameters.Add(item);
                 }
             }
-            int result = cmd.ExecuteNonQuery();
-            conn.Close();
-            return result > 0;
+            try
+            {
+                int result = cmd.ExecuteNonQuery();
+                conn.Close();
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return false;
+                throw ex;
+            }
         }
     }
 }

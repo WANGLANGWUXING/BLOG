@@ -10,16 +10,7 @@
 namespace Blog {
     
     
-    public partial class Main {
-        
-        /// <summary>
-        /// head 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+    public partial class Register {
         
         /// <summary>
         /// form1 控件。
@@ -31,39 +22,30 @@ namespace Blog {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// navPostRpt 控件。
+        /// AdminName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater navPostRpt;
+        protected global::System.Web.UI.WebControls.TextBox AdminName;
         
         /// <summary>
-        /// RptComments 控件。
+        /// AdminEmail 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RptComments;
+        protected global::System.Web.UI.WebControls.TextBox AdminEmail;
         
         /// <summary>
-        /// navTaxRpt 控件。
+        /// btnReg 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater navTaxRpt;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnReg;
     }
 }
