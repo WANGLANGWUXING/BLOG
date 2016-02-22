@@ -66,12 +66,19 @@
                         <aside class="widget widget_meta">
                             <h2 class="widget-title">功能</h2>
                             <ul>
+                                <%if(Session["UserPwd"] !=null) {%>
+                                    <li>
+                                        <a href="Admin/AdminIndex.aspx">管理博客</a>
+                                    </li>
+                                <%} %>
+                                <%else{ %>
                                 <li>
                                     <a href="Register.aspx">注册</a>
                                 </li>
                                 <li>
                                     <a href="Login.aspx">登录</a>
                                 </li>
+                                <%} %>
                             </ul>
                         </aside>
                     </div>

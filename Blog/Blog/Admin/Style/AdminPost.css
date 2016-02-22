@@ -1,0 +1,90 @@
+﻿body {
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    margin: 32px 20px 0 12px;
+    padding-top: 10px;
+}
+
+    .wrapper h1 {
+        font-size: 23px;
+        font-weight: 400;
+        margin: 0;
+        padding: 9px 15px 4px 0;
+        line-height: 29px;
+    }
+
+.page-title {
+    margin-left: 4px;
+    padding: 4px 8px;
+    position: relative;
+    top: -3px;
+    text-decoration: none;
+    border: none;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: #e0e0e0;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 13px;
+    color: #0073aa;
+}
+
+.list-table {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    border-spacing: 0;
+    width: 100%;
+    margin: 0;
+}
+
+    .list-table thead th {
+        border-bottom: 1px solid #e1e1e1;
+        line-height: 1.4em;
+        color: #32373c;
+    }
+
+    .list-table th {
+        text-align: center;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+.list-table-title, .list-table-cate, .list-table-comment, .list-table-date, .list-table-action {
+    width: 20%;
+}
+
+.list-table-cateName, .list-table-Catedesc, .list-table-edit {
+    width: 30%;
+}
+
+.list-table-commentTime, .list-table-UserName, .list-table-commentDesc, .list-table-del, .list-table-Post {
+    width: 20%;
+}
+
+.list-table td {
+    padding: 8px 10px;
+    text-align: center;
+}
+
+    .list-table td a {
+        color: #0073aa;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+.pager {
+    margin: 20px;
+}
+
+    .pager a {
+        color: #0073aa;
+        padding-right: 2px;
+        padding-left: 2px;
+    }

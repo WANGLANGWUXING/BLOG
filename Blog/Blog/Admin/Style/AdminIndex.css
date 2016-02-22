@@ -1,0 +1,53 @@
+﻿body {
+}
+
+.wrapper {
+    margin: 32px 20px 0 2px;
+}
+
+
+.dashboard-widgets-wrap {
+    overflow: hidden;
+    margin: 0 -8px;
+}
+
+.holder {
+    padding-top: 10px;
+}
+
+.postbox {
+    width: 49.5%;
+    box-sizing: border-box;
+}
+
+.meta-box {
+    margin: 0 8px;
+    min-height: 100px;
+}
+
+.postbox-container {
+    min-width: 255px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    background: #fff;
+}
+
+.handle {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+}
+
+.inside {
+    margin: 11px 0;
+}
+
+.main {
+    padding: 0 12px 11px;
+}
+
+.count {
+    color: #0073aa;
+}

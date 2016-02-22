@@ -6,6 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="../images/favicon.jpg" type="image/x-icon" rel="shortcut icon" />
     <link href="Style/AdminMain.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -18,19 +19,19 @@
                 <div class="adminMenuwrap">
                     <ul class="adminMenutip">
                         <li class="menu">
-                            <a href="#">后台首页
+                            <a href="AdminIndex.aspx">后台首页
                             </a>
                         </li>
                         <li class="menu">
-                            <a href="#">帖子管理
+                            <a href="AdminPost.aspx">文章管理
                             </a>
                         </li>
                         <li class="menu">
-                            <a href="#">分类管理
+                            <a href="AdminTax.aspx">分类管理
                             </a>
                         </li>
                         <li class="menu">
-                            <a href="#">评论管理
+                            <a href="AdminComment.aspx">评论管理
                             </a>
                         </li>
                     </ul>
@@ -50,21 +51,16 @@
 
                             </li>
                             <li>
-                                <asp:Button ID="btnOut" runat="server" CssClass="btnlog" Text="登出" OnClick="btnOut_Click"/>
+                                <asp:Button ID="btnOut" runat="server" CssClass="btnlog" Text="登出" OnClick="btnOut_Click" />
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
                 <div class="body">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-
             </div>
-
-
         </div>
     </form>
 </body>

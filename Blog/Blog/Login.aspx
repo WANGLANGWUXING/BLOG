@@ -4,8 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="images/favicon.jpg" type="image/x-icon" rel="shortcut icon" />
     <title>登录</title>
     <link href="Style/Login.css" rel="stylesheet" />
 </head>

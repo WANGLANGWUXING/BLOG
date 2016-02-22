@@ -22,6 +22,7 @@ namespace Blog
                     rememberCB.Checked = true;
                 }
             }
+
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace Blog
                         Response.Cookies.Add(cookieUserName);
                     }
                     Session["UserName"] = AdminName.Text;
+                    Session["UserPwd"] = AdminPwd.Text;
                     ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('登录成功！');location.href='Admin/AdminIndex.aspx'</script>");
                 }
                 else

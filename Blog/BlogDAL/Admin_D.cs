@@ -38,5 +38,22 @@ namespace BlogDAL
                 return false;
             }
         }
+        /// <summary>
+        /// 注册
+        /// </summary>
+        /// <param name="Admin"></param>
+        /// <returns></returns>
+        public static bool Register(Admin_M Admin)
+        {
+            SqlParameter paramAdminName = new SqlParameter();
+            paramAdminName.ParameterName = "@AdminName";
+            paramAdminName.DbType = DbType.String;
+            paramAdminName.Value = Admin.Adminlogin;
+            SqlParameter paramAdminPwd = new SqlParameter();
+            paramAdminPwd.ParameterName = "@AdminPwd";
+            paramAdminPwd.DbType = DbType.String;
+            paramAdminPwd.Value = Admin.Adminpassword;
+            return SQLDBHelper.ExecuteNonQuery("proc_Register", paramAdminName, paramAdminPwd);
+        }
     }
 }

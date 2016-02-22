@@ -15,7 +15,7 @@ namespace BlogDAL
         /// <summary>
         /// 链接字符串
         /// </summary>
-        static string connStr = "server=.;database=BLOGDB;uid=sa;pwd=123456";
+        static string connStr = "server=.;database=BLOGDB;uid=sa;pwd=123456;Connection Lifetime=300;";
         /// <summary>
         /// 获取读取器
         /// </summary>
@@ -104,6 +104,20 @@ namespace BlogDAL
                 return false;
                 throw ex;
             }
+        }
+        /// <summary>
+        /// 返回首行首列
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public static int ExecuteScalar(string sql)
+        {
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            int result=Convert.ToInt32(cmd.ExecuteScalar());
+            conn.Close();
+            return result;
         }
     }
 }

@@ -31,13 +31,13 @@ namespace Blog {
         protected global::System.Web.UI.WebControls.TextBox AdminName;
         
         /// <summary>
-        /// AdminEmail 控件。
+        /// AdminPwd 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdminEmail;
+        protected global::System.Web.UI.WebControls.TextBox AdminPwd;
         
         /// <summary>
         /// btnReg 控件。

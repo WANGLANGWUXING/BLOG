@@ -11,7 +11,6 @@ namespace Blog.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (Session["UserName"] != null)
             {
                 AdminName.Text = Session["UserName"].ToString();
@@ -24,7 +23,7 @@ namespace Blog.Admin
 
         protected void btnOut_Click(object sender, EventArgs e)
         {
-            Session.Clear();
+            Session["UserName"] = null;
             Response.Redirect("../Login.aspx");
         }
     }

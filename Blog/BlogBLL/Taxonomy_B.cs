@@ -31,12 +31,57 @@ namespace BlogBLL
             return Taxonomy_D.TaxList();
         }
         /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <param name="pageSize"></param>
+        /// <param name="pageIndex"></param>
+        /// <returns></returns>
+        public static List<Taxonomy_M> TaxListPager(string pageSize, string pageIndex)
+        {
+            return Taxonomy_D.TaxListPager(pageSize, pageIndex);
+        }
+        /// <summary>
         /// 查询前2个类型
         /// </summary>
         /// <returns>返回集合</returns>
         public static List<Taxonomy_M> TaxListTop2()
         {
             return Taxonomy_D.TaxListTop2();
+        }
+        /// <summary>
+        /// 所有类型数
+        /// </summary>
+        /// <returns>返回类型数</returns>
+        public static int TaxCount()
+        {
+            return Taxonomy_D.TaxCount();
+        }
+        /// <summary>
+        /// 删
+        /// </summary>
+        /// <param name="taxId"></param>
+        /// <returns></returns>
+        public static bool delTax(string taxId)
+        {
+            return Taxonomy_D.delTax(taxId);
+        }
+        /// <summary>
+        /// 增
+        /// </summary>
+        /// <param name="tax"></param>
+        /// <returns></returns>
+        public static bool addTax(Taxonomy_M tax)
+        {
+            return Taxonomy_D.addTax(tax);
+        }
+        /// <summary>
+        /// 改
+        /// </summary>
+        /// <param name="tax"></param>
+        /// <returns></returns>
+        public static bool updateTax(Taxonomy_M tax)
+        {
+            return Taxonomy_D.updateTax(tax);
         }
     }
 }
