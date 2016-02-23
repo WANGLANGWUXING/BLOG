@@ -75,6 +75,7 @@
     <Content Include="Admin\Style\AdminMain.css" />
     <Content Include="Admin\Style\AdminPost.css" />
     <Content Include="Admin\Style\writepost.css" />
+    <Content Include="App_Data\BLOGDATA脚本.sql" />
     <Content Include="bin\AspNetPager.dll" />
     <Content Include="bin\Blog.dll" />
     <Content Include="bin\Blog.pdb" />
@@ -447,7 +448,6 @@
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="RSS.aspx" />
     <Content Include="Style\Details.css" />
     <Content Include="Style\Index.css" />
     <Content Include="Style\Login.css" />
@@ -541,13 +541,6 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RSS.aspx.cs">
-      <DependentUpon>RSS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RSS.aspx.designer.cs">
-      <DependentUpon>RSS.aspx</DependentUpon>
     </Compile>
     <Compile Include="TaxPost.aspx.cs">
       <DependentUpon>TaxPost.aspx</DependentUpon>

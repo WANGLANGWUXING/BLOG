@@ -24,6 +24,7 @@ namespace Blog.Admin
         protected void btnOut_Click(object sender, EventArgs e)
         {
             Session["UserName"] = null;
+            Session["UserPwd"] = null;
             Response.Redirect("../Login.aspx");
         }
     }

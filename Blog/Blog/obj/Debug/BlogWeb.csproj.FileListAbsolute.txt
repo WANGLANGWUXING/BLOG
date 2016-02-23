@@ -20,3 +20,14 @@ D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\bin\BlogDAL.pdb
 D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\BlogWeb.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\Blog.dll
 D:\Documents\GitHub\BLOG\BLOG\Blog\Blog\obj\Debug\Blog.pdb
+E:\G3\Blog\Blog\bin\Blog.dll
+E:\G3\Blog\Blog\bin\Blog.pdb
+E:\G3\Blog\Blog\bin\BlogBLL.dll
+E:\G3\Blog\Blog\bin\BlogModel.dll
+E:\G3\Blog\Blog\bin\BlogDAL.dll
+E:\G3\Blog\Blog\bin\BlogBLL.pdb
+E:\G3\Blog\Blog\bin\BlogModel.pdb
+E:\G3\Blog\Blog\bin\BlogDAL.pdb
+E:\G3\Blog\Blog\obj\Debug\BlogWeb.csprojResolveAssemblyReference.cache
+E:\G3\Blog\Blog\obj\Debug\Blog.dll
+E:\G3\Blog\Blog\obj\Debug\Blog.pdb
