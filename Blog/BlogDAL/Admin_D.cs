@@ -14,8 +14,8 @@ namespace BlogDAL
         /// <summary>
         /// 登录判断
         /// </summary>
-        /// <param name="Admin"></param>
-        /// <returns></returns>
+        /// <param name="Admin">接收Admin类</param>
+        /// <returns>返回是否登录成功</returns>
         public static bool Login(Admin_M Admin)
         {
             SqlParameter paramAdminName = new SqlParameter();
@@ -41,8 +41,8 @@ namespace BlogDAL
         /// <summary>
         /// 注册
         /// </summary>
-        /// <param name="Admin"></param>
-        /// <returns></returns>
+        /// <param name="Admin">接收Admin类</param>
+        /// <returns>返回是否注册成功</returns>
         public static bool Register(Admin_M Admin)
         {
             SqlParameter paramAdminName = new SqlParameter();

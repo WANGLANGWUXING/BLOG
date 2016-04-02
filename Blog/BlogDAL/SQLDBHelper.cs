@@ -15,7 +15,7 @@ namespace BlogDAL
         /// <summary>
         /// 链接字符串
         /// </summary>
-        static string connStr = "server=.;database=BLOGDB;uid=sa;pwd=123456;Connection Lifetime=300;";
+        static string connStr = "Data Source=.;Initial Catalog=BLOGDB;Integrated Security=True;Connection Lifetime=300;";
         /// <summary>
         /// 获取读取器
         /// </summary>
@@ -50,7 +50,6 @@ namespace BlogDAL
                 return false;
                 throw ex;
             }
-
         }
         /// <summary>
         /// 调用存储过程进行查询  

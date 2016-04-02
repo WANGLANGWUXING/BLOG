@@ -24,8 +24,8 @@ namespace BlogBLL
         /// <summary>
         /// 分页查询
         /// </summary>
-        /// <param name="pageSize"></param>
-        /// <param name="pageIndex"></param>
+        /// <param name="pageSize">每页数据</param>
+        /// <param name="pageIndex">页码</param>
         /// <returns></returns>
         public static List<Comments_M> CommentsListPager(string pageSize, string pageIndex)
         {
@@ -59,8 +59,8 @@ namespace BlogBLL
         /// <summary>
         /// 删
         /// </summary>
-        /// <param name="commentid"></param>
-        /// <returns></returns>
+        /// <param name="commentid">接收评论id</param>
+        /// <returns>返回是否删除成功</returns>
         public static bool delcomment(string commentid)
         {
             return Comments_D.delcomment(commentid);

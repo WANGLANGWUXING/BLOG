@@ -77,9 +77,9 @@ namespace BlogDAL
         /// <summary>
         /// 分页查询
         /// </summary>
-        /// <param name="pageSize"></param>
-        /// <param name="pageIndex"></param>
-        /// <returns></returns>
+        /// <param name="pageSize">每页数据行数</param>
+        /// <param name="pageIndex">页码</param>
+        /// <returns>返回集合</returns>
         public static List<Taxonomy_M> TaxListPager(string pageSize, string pageIndex)
         {
             List<Taxonomy_M> list = new List<Taxonomy_M>();
@@ -143,7 +143,7 @@ namespace BlogDAL
         /// <summary>
         /// 所有类型数
         /// </summary>
-        /// <returns></returns>
+        /// <returns>返回数量</returns>
         public static int TaxCount()
         {
             string sql = "select count(*) from Taxonomy";
